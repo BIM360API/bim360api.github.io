@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+		<meta charset="utf-8">
+        <title>Autodesk PaaS - API Detail Page - View & Data</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/ionicons.css" rel="stylesheet">
+		<link href="css/maria-theme-checkbox.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/maria-base-theme.css" rel="stylesheet">
+		<link href="css/maria-theme.css" rel="stylesheet">
+		<link href="css/open-sans.css" rel="stylesheet">
+		<link href="css/ek_changes.css" rel="stylesheet">
+
+	<body data-spy="scroll" data-target="#nav-parent">
+		<!-- Header================================================== -->
+		
+		<div class="bs-docs-section clearfix">
+			<div class="row">
+				<div class="col-lg-12">
+									
+				<div class="bs-component">
+					<div class="navbar navbar-default app-navbar">
+						<div class="container app-container">
+							<div class="navbar-header">
+								<a class="navbar-brand" href="javascript:void(0)"><img width="160px;" src="img/Autodesk_logo.png" style="padding: 20px;"></a>
+							</div>
+							<div class="navbar-nav-large navbar-signed-in">
+								<ul class="nav navbar-nav app-main-nav">
+									<li><a href="" class="dropdown-toggle" data-toggle="dropdown">APIs</a>
+										<div class="app-dropdown-container">
+											<div class="app-dropdown-body app-container">
+												<div class="app-dropdown-container-small">
+													<div class="dropdown-menu navbar-dropdown-menu">
+														<ul class="navbar-dropdown-1col">
+															<li><a>
+																<div class="row-picture app-row-picture app-api-picture">
+																	<img class="" src="img/View_And_Data_100px.png" alt="icon">
+																</div>
+																<div class="row-title app-api-name">
+																	<h5>View & Data</h5>
+																	<div class="app-badge app-badge-approved"><span>New</span></div>
+																</div>
+																<div class="row-content app-api-description">
+																	<p>Create custom apps that enable your customers to visualize and interact with 2D and 3D design data right in a web browser or on a mobile device.</p>
+																</div>			
+															</a></li>
+															<li><a>
+																<div class="row-picture app-row-picture app-api-picture">
+																	<img class="" src="img/AutoCAD_API_100px.png" alt="icon">
+																</div>
+																<div class="row-title app-api-name">
+																	<h5>AutoCAD I/O</h5>
+																</div>
+																<div class="row-content app-api-description">
+																	<p>Harness the power of AutoCAD from the cloud to deliver unique, scalable, fast, and high-powered web services to your customers.</p>
+																</div>			
+															</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">SUPPORT</a>
+										<div class="app-dropdown-container">
+											<div class="app-dropdown-body app-container">
+												<div class="app-dropdown-container-big">
+													<div class="dropdown-menu navbar-dropdown-menu">
+													<ul class="navbar-dropdown-1col" style="border-right:1px solid #ccc;">
+														<h5 class="navbar-dropdown-subtitle">Sample Apps</h5>
+														<p class="navbar-dropdown-text">Grab some ideas from other apps</p>
+														<li><a>
+															<div class="row-picture app-row-picture app-api-picture">
+																<img class="" src="img/View_And_Data_62px.svg" alt="icon">
+															</div>
+															<div class="row-title app-api-name">
+																<h5>Android Workflow</h5>
+															</div>
+															<div class="row-content app-api-description">
+																<p>Your users can view, zoom and interact with 2D and 3D models from Autodesk product on </p>
+															</div>			
+														</a></li>
+														<li><a>
+															<div class="row-picture app-row-picture app-api-picture">
+																<img class="" src="img/Rendering_62px.svg" alt="icon">
+															</div>
+															<div class="row-title app-api-name">
+																<h5>IOS Workflow</h5>
+															</div>
+															<div class="row-content app-api-description">
+																<p>Your users can view, zoom and interact with 2D and 3D models from Autodesk product on </p>
+															</div>			
+														</a></li>
+														<li><a>
+															<div class="row-picture app-row-picture app-api-picture">
+																<img class="" src="img/Energy_62px.svg" alt="icon">
+															</div>
+															<div class="row-title app-api-name">
+																<h5>IOS Workflow</h5>
+															</div>
+															<div class="row-content app-api-description">
+																<p>Your users can view, zoom and interact with 2D and 3D models from Autodesk product on </p>
+															</div>			
+														</a></li>
+													</ul>
+													<ul class="navbar-dropdown-1col">
+															<li>
+															<h5 class="navbar-dropdown-subtitle link"><a>Knowledge Network</a></h5>
+															<p class="navbar-dropdown-text">Find your answers about ADutodesk products and services here</p>
+															</li>
+															<li>
+															<h5 class="navbar-dropdown-subtitle link"><a>Forum</a></h5></a>
+															<p class="navbar-dropdown-text">Find what you want from the discussion threads within the Autodesk Community</p>
+															</li>
+															<li>
+															<h5 class="navbar-dropdown-subtitle link"><a>Blogs</a></h5>
+															<p class="navbar-dropdown-text">Look through tips and tricks from the ADN developers as they share their secrets from time to timeportal</p>
+															</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									</li>
+									<li><a href="" class="dropdown-toggle" data-toggle="dropdown">MY APPs</a></li>
+								 </ul>
+								 <ul class="nav navbar-nav navbar-right">
+									<li id="navbar-create-an-app">
+										<button href="" id="nav-btn-createApp" class="btn app-btn app-btn-sm app-btn-default">Get Started</button>
+										<button href="" id="nav-btn-create" class="btn app-btn app-btn-sm app-btn-default">Start</button>
+									</li>
+									<li id="sign-in-section" class="dropdown">
+										<button id="SignInDrop" class="btn app-btn btn-person btn-person-image" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<img class="circle" src="img/63.jpg" alt="icon">
+										</button>
+										<div id="sign-in-block">
+											<span id="sign-in-user">User Name</span>
+											<span id="sign-in-mail">fe.rodriguez.ax@mailinator</span>
+										</div>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="SignInDrop">
+											<li><a>My Apps</a></li>
+											<li><a>My Profile</a></li>
+											<li><a>Signout</a></li>
+										</ul>
+									</li>
+								 </ul>
+							 </div>
+							 <div class="navbar-nav-mobile navbar-signed-in">
+								<ul class="nav navbar-nav app-main-nav">
+									<li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">APIs</a>
+										<div class="app-dropdown-container">
+											<div class="app-dropdown-body app-container">
+												<div class="app-dropdown-container-big">
+													<div class="dropdown-menu navbar-dropdown-menu">
+														<ul class="navbar-dropdown-1col">
+															<li><a>
+																<div class="row-title app-api-name">
+																	<h5>View & Data</h5>
+																</div>			
+															</a></li>
+															<li><a>
+																<div class="row-title app-api-name">
+																	<h5>AutoCAD I/O</h5>
+																</div>		
+															</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Support</a>	
+										<div class="app-dropdown-container">
+											<div class="app-dropdown-body app-container">
+												<div class="app-dropdown-container-big">
+													<div class="dropdown-menu navbar-dropdown-menu">
+														<ul class="navbar-dropdown-1col">
+															<li>
+																<div class="row-title app-api-name">
+																	<h5>Sample Apps</h5>
+																</div>
+																<a class="sub-menu">
+																	<div class="row-title app-api-name">
+																		<h5>Android App</h5>
+																	</div>
+																</a>
+																<a class="sub-menu">
+																	<div class="row-title app-api-name">
+																		<h5>iOS App</h5>
+																	</div>
+																</a>
+																<a class="sub-menu">
+																	<div class="row-title app-api-name">
+																		<h5>Windows App</h5>
+																	</div>
+																</a>
+															</li>
+															<li>
+																<a>
+																<div class="row-title app-api-name">
+																	<h5>Knowledge Network</h5>
+																</div>
+																</a>
+															</li>
+															<li>
+																<a>
+																<div class="row-title app-api-name">
+																	<h5>Forum</h5>
+																</div>			
+																</a>
+															</li>
+															<li>
+																<a>
+																<div class="row-title app-api-name">
+																	<h5>Blogs</h5>
+																</div>		
+																</a>
+															</li>
+														</ul>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">My Apps</a></li>
+								 </ul>
+								 <ul class="nav navbar-nav navbar-right">
+									<li class="navbar-create-an-app">
+										<button href="" id="nav-btn-create" class="btn app-btn app-btn-sm app-btn-default">Start</button>
+									</li>
+								</ul>
+							</div>
+						  </div>
+					</div>
+				</div>
+					  
+				</div>
+			</div>				
+		</div>
+		
+		<!-- Banner================================================== -->
+		
+		<div class="clearfix">
+			<div class="row">
+				<div class="col-lg-12">
+				
+					<div class="page-header content-header app-content-header api-detail-header view-and-data-api">
+						<div class="container app-container">
+							<div class="col-xs-12 col-sm-6 col-md-9 col-lg-9 app-title-container">
+								<h1 id="view-and-data-title">View & Data API</h1>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 app-button-container">
+								<p class="bs-component">
+									<a href="ADSK_PaaS_Create_New_App.html" class="btn app-btn app-btn-lg app-btn-primary create-app-btn pull-right">Create an App<span class="bg-icon size-21"><i class="icon ion-chevron-right"></i></span></a>
+								</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<!-- Content================================================== -->
+		
+		<div class="content-form app-content-form clearfix">
+			<div class="container app-container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+						<div id="nav-parent" class="page-header hidden-xs">
+								<div data-spy="affix" data-offset-top="200" class="panel panel-default app-panel-default app-sidenav-panel">
+									<div class="navbar-collapse collapse navbar-responsive-collapse panel-body app-panel-body app-sidenav-body" role="complementary">
+										<div class="col-lg-12">
+											<ul class="nav nav-pills nav-stacked app-sidenav">
+												<li role="presentation" class="active"><a href="#Overview" class="first-child">Overview</a> 
+													<ul class="nav second-level-nav hidden-xs">
+														<li role="presentation"><a href="#Features">Features</a></li>
+														<li role="presentation"><a href="#Files">Supported File Format</a></li>
+														<li role="presentation"><a href="#SampleCodes">Sample Code</a></li>
+														<li role="presentation"><a href="#Testimonial">Testimonial</a></li>
+													</ul>
+												</li>
+												<li role="presentation"><a href="#StepByStep" class="first-child">Step-by-step</a></li>
+												<li role="presentation"><a href="#Documentation" class="first-child">Documentation</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+						</div>
+						<div id="nav-parent-mobile" class="page-header hidden-sm hidden-md hidden-lg">
+								<div data-spy="affix" data-offset-top="150" class="panel panel-default app-panel-default app-sidenav-panel">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+									<div class="navbar-collapse collapse navbar-responsive-collapse panel-body app-panel-body app-sidenav-body" role="complementary">
+										<div class="col-lg-12">
+											<ul class="nav nav-pills nav-stacked app-sidenav">
+												<li role="presentation" class="active"><a href="#Overview" class="first-child" data-toggle="collapse" data-target=".navbar-responsive-collapse">Overview</a></li>
+												<li role="presentation"><a href="#StepByStep" data-toggle="collapse" data-target=".navbar-responsive-collapse">Step-by-step Guide</a></li>
+												<li role="presentation"><a href="#Documentation" data-toggle="collapse" data-target=".navbar-responsive-collapse">Documentation</a>
+													<ul class="nav second-level-nav hidden-xs">
+														<li role="presentation"><a href="#Features">Features</a>
+														</li>
+														<li role="presentation"><a href="#Files">Files</a></li>
+														<li role="presentation"><a href="#SampleCodes">Sample Code</a></li>
+														<li role="presentation"><a href="#Testimonial">Testimonial</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+						<div class="page-header">
+								<div class="panel panel-default app-panel-default">
+									<div class="panel-body app-panel-body app-api-doc">
+										<div class="col-lg-12">
+											<div class="app-api-section">
+												<div id="Overview" class="app-api-section-heading">
+													<h2 class="app-api-section-title first-child">Overview</h2>
+												</div>
+												<p>Create custom apps that enable your customers to visualize and interact with 2D and 3D design data right in a web browser or on a mobile device. No downloads or plug-ins required. The View & Data API supports over 60 file formats. REST and JavaScript APIs mean you don&#39;t have to learn new tools.</p>										
+                                                <div id="Features" class="app-api-section-heading clearfix">
+													<h3 class="app-api-section-title">Features</h3>
+												</div>
+												<ul>
+													<li>REST and JavaScript API makes it easier to create applications.</li>
+													<li>Upload your model via our REST API, and our web service creates the viewing stream for you.</li>
+													<li>Our JavaScript API provides access to model and model components data in your web app - no need for desktop CAD software installations.</li> 
+													<li>2D and 3D models come to life right within your browser &#45; view detailed textures, vivid visualizations, smooth navigation, and in-depth design data.</li> 
+													<li>Browser compatibility with Chrome, Safari and Firefox.</li> 
+													<li>Visualize and interact with more than 60 design file formats in your web app; no plug-ins or downloads required.</li>
+												</ul>
+												<div id="Files" class="app-api-section-heading">
+													<h3 class="app-api-section-title">Supported File Format</h3>
+												</div>
+												<div class="table-responsive">
+													<table class="table table-hover app-table">
+														<thead>
+															<tr>
+																<th>Autodesk</th>
+																<th>Non Autodesk</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>AutoCAD&#174; DWG</td>
+																<td>CATIA</td>
+															</tr>
+															<tr>
+																<td>Autodesk&#174; Inventor&#174</td>
+																<td>Siemens Parasolid</td>
+															</tr><tr>
+																<td>Autodesk&#174; Fusion 360</td>
+																<td>Siemens JT Open</td>
+															</tr><tr>
+																<td>Autodesk&#174; Simulation Flex</td>
+																<td>WaveFront Technologies OBJ</td>
+															</tr><tr>
+																<td>Autodesk&#174; Navisworks&#174;</td>
+																<td>Siemens NX</td>
+															</tr><tr>
+																<td>Autodesk&#174; Revit&#174;</td>
+																<td>STEP</td>
+																</tr><tr>
+																<td>Autodesk&#174; 3ds Max&#174;</td>
+																<td>SolidWorks and many more...</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>												
+												<div id="SampleCodes" class="app-api-section-heading">
+													<h3 class="app-api-section-title">Sample Code</h2>
+												</div>
+												<p>Samples demonstrating the workflow of view and data API in various languages.</p>
+												<div class="table-responsive">
+													<table class="table table-hover app-table">
+
+														<thead>
+															<tr>
+																<th>Language</th>
+																<th>Description</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><a href="">.Net</a></td>
+																<td>ASP.NET Webform sample for uploading, registering and embedding files into a webpage</td>
+															</tr>
+															<tr>
+																<td><a href="">cURL</a></td>
+																<td>cURL sample in command line scripts</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>	
+												<a href="#">View more samples on GitHub</a>
+												<div id="Testimonial" class="app-api-section-heading">
+													<h3 class="app-api-section-title">User Story</h2>
+												</div>
+												<p class="col-xs-12 col-sm-12 col-md-7 col-lg-7 clearfix"><strong>&#34;We are very impressed by how fast and how far the View & Data API has come along.&#34; </strong><span><strong><br>
+												  </strong><br>
+												  Steve Segarra - CTO, Archibus Inc.</span></p>
+												<div class="row-picture app-row-picture app-api-picture app-api-video col-xs-12 col-sm-12 col-md-5 col-lg-5 clearfix">
+													<a href="https://www.youtube.com/watch?v=crFZPSZLaFs" target="_blank">
+													<img id="" src="https://i.ytimg.com/vi/crFZPSZLaFs/mqdefault.jpg" title="Meet the Autodesk View & Data API">
+													<button class="app-btn-play"><span class="bg-icon size-21"><i class="icon ion-ios7-play"></i></span></button>
+													</a>
+												</div>
+												<div class="row-picture app-row-picture app-api-picture app-api-video col-xs-12 col-sm-12 col-md-5 col-lg-4 clearfix">
+													<a href="https://www.youtube.com/watch?v=M_usLBL5c0Y" target="_blank">
+													<img id="" src="https://i.ytimg.com/vi/M_usLBL5c0Y/maxresdefault.jpg" title="How I Use Autodesk View & Data API: Archibus">
+													<button class="app-btn-play"><span class="bg-icon size-21"><i class="icon ion-ios7-play"></i></span></button>
+													</a>
+													<p><strong>Title</strong></br>Text</p>
+												</div>
+												<div class="row-picture app-row-picture app-api-picture app-api-video col-xs-12 col-sm-12 col-md-5 col-lg-4 clearfix">
+													<a href="https://www.youtube.com/watch?v=T3OxhznSKqs" target="_blank">
+													<img id="" src="https://i.ytimg.com/vi/T3OxhznSKqs/maxresdefault.jpg" title="How I Use Autodesk View & Data API: FM Systems">
+													<button class="app-btn-play"><span class="bg-icon size-21"><i class="icon ion-ios7-play"></i></span></button>
+													</a>
+													<p><strong>Brian Haines</strong></br>Director of marketing, FM:Systems</p>
+												</div>
+												<div class="row-picture app-row-picture app-api-picture app-api-video col-xs-12 col-sm-12 col-md-5 col-lg-4 clearfix">
+													<a href=" http://youtu.be/78T7AnFLt0Q" target="_blank">
+													<img id="" src="https://i.ytimg.com/vi/78T7AnFLt0Q/maxresdefault.jpg" title="How I Use Autodesk View & Data API: ImaginIT Technologies">
+													<button class="app-btn-play"><span class="bg-icon size-21"><i class="icon ion-ios7-play"></i></span></button>
+													</a>
+													<p><strong>Matt Mason</strong></br>Director of Software Development ImaginIT Technologies</p>
+												</div>
+											</div>
+											<div class="app-api-section">
+												<div id="StepByStep" class="app-api-section-heading clearfix">
+													<h2 class="app-api-section-title">Step-By-Step Guide</h2>
+												</div>
+												<div id="Step1" class="app-api-section-heading">
+													<h3 class="app-api-section-title">Step 1: Sign in and create an application</h2>
+												</div>	
+												<p>To use the Autodesk View and Data API, first create an Autodesk Account. To do so, click on &#34;Get Started&#34; from navigation bar and fill out the information.</p>
+												<div class="row-picture app-row-picture app-api-picture app-api-screenshoot col-xs-12 col-sm-12 col-md-12 col-lg-12 clearfix">
+													<img id="Steve" src="img\GetStarted.png" alt="GetStarted">
+												</div>
+												<p>The developer portal will send you an email with login information. 
+												Use the URL in the email to log in to developer.autodesk.com. Once you&#39;re signed in, you can create an application.</p>
+												<div class="row-picture app-row-picture app-api-picture app-api-screenshoot col-xs-12 col-sm-12 col-md-12 col-lg-12 clearfix">
+													<img id="Steve" src="img\CreateAnApp.png" alt="CreateAnApp">
+												</div>
+												<ul class="clearfix">
+													<li>Click on &#34;Create an App&#34; button on navigation bar or in &#34;My Apps&#34; page.</li>
+													<li>Enter your application name, description and redirect URL(callback URL).</li>
+													<li>Select &#34;View and Data API&#34; API.</li>
+												</ul>
+												<p><b>Note:</b> the Redirect URL is for OAuth2 2 leg authentication. Don&#39;t worry if you do not
+have a callback set up yet, but a value is required in this field to proceed.</p>
+												<p>Once you have an application set up, you will see a Consumer Key and Consumer Secret in your newly created app page or in registered email. Note what these are, you will need them for the next step.</p>
+												<div class="row-picture app-row-picture app-api-picture app-api-screenshoot col-xs-12 col-sm-12 col-md-12 col-lg-12 clearfix">
+													<img id="Steve" src="img\ViewApp.png" alt="ViewApp">
+												</div>
+											</div>
+									</div>
+									<!-- Bottom Back to top Mobile================================================== -->
+									<div class="bs-docs-section clearfix">
+										<div class="row">
+											<div class="col-xs-12">
+												<div class="col-xs-6 col-sm-6 app-button-container mob-app-button-container back-to-top-container">
+													<p class="bs-component">
+														<a href="#view-and-data-title" class="btn app-btn app-btn-lg app-btn-default back-to-top-btn">Back to top</a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			
+			<!-- Bottom Button Mobile================================================== -->
+		
+						<div class="bs-docs-section clearfix">
+							<div class="row">
+								<div class="col-lg-12">
+										<div class="container app-container">
+											<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 app-button-container mob-app-button-container">
+												<p class="bs-component">
+													<a href="ADSK_PaaS_Create_New_App.html" class="btn app-btn app-btn-lg app-btn-primary create-app-btn pull-right">Create an App<span class="bg-icon size-21"><i class="icon ion-chevron-right"></i></span></a>
+												</p>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+		</div>
+
+		<!-- Footer================================================== -->
+		
+		<div class="clearfix">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="page-footer">
+						<div class="container app-container">
+							<p><a href="http://www.autodesk.com/company/legal-notices-trademarks/privacy-statement">Privacy</a>  |  <a href="http://www.autodesk.com/company/legal-notices-trademarks">Legal Notices & Trademarks</a>  |  <a href="http://www.autodesk.com/company/license-compliance/report-noncompliance">Report Noncompliance</a>
+							<br>&#169; Copyright 2014 Autodesk. All rights reserved. </p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+        <!-- Your site ends -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script>
+		jQuery(document).ready(function() {
+			var offset = 200;
+			var duration = 500;
+			jQuery(window).scroll(function() {
+				if (jQuery(this).scrollTop() > offset) {
+					jQuery('.back-to-top-btn').fadeIn(duration);
+				} else {
+					jQuery('.back-to-top-btn').fadeOut(duration);
+				}
+			});
+			
+			jQuery('.back-to-top-btn').click(function(event) {
+				event.preventDefault();
+				jQuery('html, body').animate({scrollTop: 0}, duration);
+				return false;
+			})
+		});
+		</script>
+		});
+    </body>
+</html>
