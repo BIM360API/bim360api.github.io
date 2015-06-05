@@ -528,33 +528,108 @@
 								
 											</div>
 											<div class="app-api-section">
-												<div id="StepByStep" class="app-api-section-heading clearfix">
-													<h2 class="app-api-section-title">Step-By-Step Guide</h2>
-												</div>
-												<div id="Step1" class="app-api-section-heading">
-													<h3 class="app-api-section-title">Step 1: Sign in and create an application</h2>
-												</div>	
-												<p>To use the Autodesk View and Data API, first create an Autodesk Account. To do so, click on &#34;Get Started&#34; from navigation bar and fill out the information.</p>
-												<div class="row-picture app-row-picture app-api-picture app-api-screenshoot col-xs-12 col-sm-12 col-md-12 col-lg-12 clearfix">
-													<img id="Steve" src="img\GetStarted.png" alt="GetStarted">
-												</div>
-												<p>The developer portal will send you an email with login information. 
-												Use the URL in the email to log in to developer.autodesk.com. Once you&#39;re signed in, you can create an application.</p>
-												<div class="row-picture app-row-picture app-api-picture app-api-screenshoot col-xs-12 col-sm-12 col-md-12 col-lg-12 clearfix">
-													<img id="Steve" src="img\CreateAnApp.png" alt="CreateAnApp">
-												</div>
-												<ul class="clearfix">
-													<li>Click on &#34;Create an App&#34; button on navigation bar or in &#34;My Apps&#34; page.</li>
-													<li>Enter your application name, description and redirect URL(callback URL).</li>
-													<li>Select &#34;View and Data API&#34; API.</li>
-												</ul>
-												<p><b>Note:</b> the Redirect URL is for OAuth2 2 leg authentication. Don&#39;t worry if you do not
-have a callback set up yet, but a value is required in this field to proceed.</p>
-												<p>Once you have an application set up, you will see a Consumer Key and Consumer Secret in your newly created app page or in registered email. Note what these are, you will need them for the next step.</p>
-												<div class="row-picture app-row-picture app-api-picture app-api-screenshoot col-xs-12 col-sm-12 col-md-12 col-lg-12 clearfix">
-													<img id="Steve" src="img\ViewApp.png" alt="ViewApp">
-												</div>
-											</div>
+												<div id="other-samples" class="app-api-section-heading">
+                                                <h2 class="app-api-section-title first-child">Other samples</h2>
+                                            </div>
+                                            <p>Some additional samples in various languages, demonstrating the workflow of view and data API.</p>
+                                                    <div class="row">
+                                                        <div class="col-md-10 col-md-offset-1">
+                                                            <div class="list-group">
+                                                                <a href="https://github.com/Developer-Autodesk/workflow-aspnet-webform-view.and.data.api" 
+                                                                    class="list-group-item">
+                                                                <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                                .NET Sample - Web<br>
+                                                                A simple live sample demonstrating the worklfow of uploading, registering and embedding a 2D/3D model into a web page.
+                                                                </a> 
+                                                                <a href="https://github.com/Developer-Autodesk/workflow-wpf-view.and.data.api" 
+                                                                    class="list-group-item">
+                                                                <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                                .NET WPF - Desktop<br>
+                                                                A WPF(Windows Presentation Foundation) sample that demonstrates the capabilities of Autodesk View and Data API.
+                                                                </a>
+                                                                <a href="https://github.com/Developer-Autodesk/workflow-dotnet-winform-view.and.data.api"
+                                                                    class="list-group-item">
+                                                                <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                                .NET WinForm - Desktop<br>
+                                                                A WinForm desktop application sample demonstrating the partial workflow of using
+                                                                Autodesk View and Data API. This sample can be used as a utility tool to upload/translate your models for the usage of other samples.
+                                                                </a>
+                                                                <a href="https://github.com/Developer-Autodesk/workflow-android-view.and.data.api" 
+                                                                    class="list-group-item">
+                                                                <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                                Java Android - Mobile<br>
+                                                                A sample demonstrating the partial workflow of using Autodesk View and Data API.
+                                                                </a>
+                                                                <a href="https://github.com/Developer-Autodesk/workflow-ios-view.and.data.api" 
+                                                                    class="list-group-item">
+                                                                <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                                Objective-C iOS - Mobile<br>
+                                                                This is a sample for iOS devices demoing the partial workflow of using Autodesk View and Data API.
+                                                                </a>
+                                                                <a href="https://github.com/Developer-Autodesk/workflow-macos-swift-view.and.data.api" 
+                                                                    class="list-group-item">
+                                                                <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                                Swift MacOS - Desktop<br>
+                                                                A MacOS sample demonstrating calling the server-side REST API from Swift.
+                                                                </a>
+                                                                <a href="https://github.com/Developer-Autodesk/workflow-curl-view.and.data.api" 
+                                                                    class="list-group-item">
+                                                                <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                                cURL - Command Line<br>
+                                                                A sample demonstrating the workflow of using View and Data API in command line tool.
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            <p>Here are some other samples, demonstrating the integration with othersystems, such as your own ERP/CRM system, external Database, etc.</p>
+                                                    <div class="row">
+                                                        <div class="col-md-10 col-md-offset-1">
+                                                            <div class="list-group">
+                                                                <a href="https://github.com/Developer-Autodesk/integration-bing-maps-view.and.data.api"
+                                                                    class="list-group-item">
+                                                                <i class="fa fa-puzzle-piece fa-2x pull-left"></i>
+                                                                Bing Maps View Integration<br>
+                                                                A sample integrating Microsoft Bing Maps with Autodesk View and Data API.
+                                                                </a>
+                                                                <!-- <p><a class="btn btn-xs btn-default" href="#" target="_blank">Video</a>  
+                                                                    <a class="btn btn-xs btn-default" href="http://viewer.autodesk.io/bingmapintegration" target="_blank">Demo</a> 
+                                                                    </p>
+                                                                    -->
+                                                                <a href="https://github.com/Developer-Autodesk/integration-mongo-view.and.data.api" 
+                                                                   class="list-group-item">
+                                                                    <i class="fa fa-puzzle-piece fa-2x pull-left"></i>
+                                                                    Node.js + Mongo Integration<br>
+                                                                    Integrates Node.js, MongoDB and View and Data API, storing each object in a database.
+                                                                </a>
+                                                                <a href="https://github.com/Developer-Autodesk/integration-sharepoint-view.and.data.api"
+                                                                    class="list-group-item">
+                                                                <i class="fa fa-puzzle-piece fa-2x pull-left"></i>
+                                                                SharePoint Integration<br>
+                                                                This repository contains files that show how you can upload files
+                                                                and view them inside SharePoint using the Autodesk viewer.
+                                                                </a>
+                                                                <!-- <p><a class="btn btn-xs btn-default" href="#" target="_blank">Video</a>  
+                                                                    <a class="btn btn-xs btn-default" href="#" target="_blank">Demo</a> 
+                                                                    </p> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            <p>Samples demonstrating the possible usage of view and data API:</p>
+                                                <div class="row">
+                                                    <div class="col-md-10 col-md-offset-1">
+                                                        <div class="list-group">
+                                                            <a href="https://github.com/Developer-Autodesk/client-timeliner-view.and.data.api" 
+                                                                class="list-group-item">
+                                                            <i class="fa fa-file-code-o fa-2x pull-left"></i>
+                                                            Timeliner<br>
+                                                            A sample simulating the Navisworks timeline with a model displayed in the viewer.
+                                                            </a>
+                                                            <!-- <p><a class="btn btn-xs btn-default" href="#" target="_blank">Video</a>  
+                                                                <a class="btn btn-xs btn-default" href="http://viewer.autodesk.io/timeliner" target="_blank">Demo</a> 
+                                                                </p> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
 									</div>
 									<!-- Bottom Back to top Mobile================================================== -->
 									<div class="bs-docs-section clearfix">
