@@ -380,26 +380,25 @@
 												</div>			 -->
 												<!--  -->
 												<div id="play-with-api" class="app-api-section-heading">
-                                                    <h2 class="app-api-section-title first-child">Play with the APIs</h2>
+                                                    <h2 class="app-api-section-title first-child">BIM 360 Glue API</h2>
                                                 </div>
                                                 <p>
-                                                    Pretty exciting, right? Eager to learn some APIs and get it running on your own website?
-                                                    Here are some live samples you can play with to understand the workflow and the client APIs.
+												What is the Autodesk® BIM 360™ Glue SDK?
                                                 </p>
-                                                <p>The API comes in two parts -</p>
+                                                <p>The BIM 360 Glue SDK consists of two distinct components: -</p>
                                                 <ul>
-                                                    <li><strong>A (server-side) REST API</strong> that allows you to translate any of over 70 file formats into a common (JSON) file format. The data extracted from the original file is the geometry of every element in the model and the metadata that was attached to each of those model elements.</li>
-                                                    <li><strong>A (client-side) JavaScript API</strong> that simplifies displaying and interacting with a model that has been processed by the translator. The UI for the viewer defined by the API can be heavily customized, viewer actions can be automated (zoom, pan rotate, explode, etc), and callbacks are available for user-driven events (e.g. a mouse click on a specific model element, a change in camera position, etc).</li>
+                                                    <li><strong>Web Services API</strong> The Web Services API is a data access API that will allow third party developers to access to the various data objects within the BIM 360 Glue Platform. These data objects would include types such as Users, Projects, Models, etc. With this API, a developer could easily integrate external applications such as project management systems, accounting systems or custom developed solutions.</li>
+                                                    <li><strong>Display Component</strong> The Display Component of the BIM 360 Glue SDK is an embeddable viewer and the easiest way for a third party to show 3D models from the BIM 360 Glue Platform within their own custom developed web application.</li>
                                                 </ul>
-                                                <p>Play with the following live applications first to understand the server side REST API, practice some Client side JavaScript APIs, and then setup your first 3D model viewer web page with the utility live sample. Make sure you check the source code of these live samples.</p>
+                                                <p>With the BIM 360 Glue SDK, you can build applications that take full advantage of the power of the BIM 360 Glue Platform and bring state of the art BIM technology into your products and services.</p>
                                                 <br>
                                                 <div class="row">
                                                     <div class="col-md-6 col-xs-12">
                                                         <div class="">
                                                             <h4 align="center">
-                                                                Learn the Server-side REST API
+                                                                Windows Desktop Client (Test Harness)
                                                             </h4>
-                                                            <p align="center">A live quick start guide demonstrating the workflow of using View and Data API.</p>
+                                                            <p align="center">The Windows Desktop Client (Test Harness) is a Visual Studio 2010 Project written in C#.</p>
                                                         </div>
                                                         <div class="">
                                                             <div class="center">
@@ -420,9 +419,9 @@
                                                     <div class="col-md-6 col-xs-12">
                                                         <div>
                                                             <h4 align="center">
-                                                                Learn the Client-side JavaScript API
+                                                                ASP.NET Web Application
                                                             </h4>
-                                                            <p align="center">A live sample demonstrating the usage of viewer client APIs.</p>
+                                                            <p align="center">The ASP.NET Web Application is a Visual Studio 2010 Project written in C#.</p>
                                                         </div>
                                                         <div class="">
                                                             <div class="center">
@@ -447,23 +446,22 @@
                                                     <h2 class="app-api-section-title first-child">BIM 360 Field API</h2>
                                                 </div>
                                                 <p>
-                                                    Pretty exciting, right? Eager to learn some APIs and get it running on your own website?
-                                                    Here are some live samples you can play with to understand the workflow and the client APIs.
+                                                    Field API is a REST based web services API that returns results serialized as JSON. All high-level objects support CRUD. 
                                                 </p>
-                                                <p>The API comes in two parts -</p>
+                                                <p>Two Sets of APIs -</p>
                                                 <ul>
-                                                    <li><strong>A (server-side) REST API</strong> that allows you to translate any of over 70 file formats into a common (JSON) file format. The data extracted from the original file is the geometry of every element in the model and the metadata that was attached to each of those model elements.</li>
-                                                    <li><strong>A (client-side) JavaScript API</strong> that simplifies displaying and interacting with a model that has been processed by the translator. The UI for the viewer defined by the API can be heavily customized, viewer actions can be automated (zoom, pan rotate, explode, etc), and callbacks are available for user-driven events (e.g. a mouse click on a specific model element, a change in camera position, etc).</li>
+                                                    <li><strong>/fieldapi/{object}/v{version}</strong> that allows you to work with Field Data</li>
+                                                    <li><strong>api/</strong> Designed for BIM 360 Field Mobile, but is open for customer use.</li>
                                                 </ul>
-                                                <p>Play with the following live applications first to understand the server side REST API, practice some Client side JavaScript APIs, and then setup your first 3D model viewer web page with the utility live sample. Make sure you check the source code of these live samples.</p>
+                                                <p>Play with the following live application first to understand the Web Services API, and then setup your first integration app leveraging the web services. Make sure you check the source code of these live samples.</p>
                                                 <br>
                                                 <div class="row">
                                                     <div class="col-md-6 col-xs-12">
                                                         <div class="">
                                                             <h4 align="center">
-                                                                Learn the Server-side REST API
+                                                                Learn the Field Web Services
                                                             </h4>
-                                                            <p align="center">A live quick start guide demonstrating the workflow of using View and Data API.</p>
+                                                            <p align="center">A live quick start guide demonstrating the workflow of using Field Web Services.</p>
                                                         </div>
                                                         <div class="">
                                                             <div class="center">
@@ -481,29 +479,7 @@
                                                             </span>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6 col-xs-12">
-                                                        <div>
-                                                            <h4 align="center">
-                                                                Learn the Client-side JavaScript API
-                                                            </h4>
-                                                            <p align="center">A live sample demonstrating the usage of viewer client APIs.</p>
-                                                        </div>
-                                                        <div class="">
-                                                            <div class="center">
-                                                                <a href="http://lmvdbg.iab.app42paas.com/" target="_blank">
-                                                                    <span class="fa-stack fa-5x">
-                                                                        <i class="fa fa-file-o fa-stack-2x"></i>
-                                                                        <i class="fa fa-wrench fa-stack-1x"></i>
-                                                                    </span>
-                                                                </a>
-                                                            </div>
-                                                            <br>
-                                                            <span class="btn-group pull-right">
-                                                                <a class="btn btn-primary btn-large" href="http://lmvdbg.iab.app42paas.com/" target="_blank">Live Demo</a>
-                                                                <a class="btn btn-info btn-large" href="https://github.com/Developer-Autodesk/LmvDbg">Code</a>
-                                                            </span>
-                                                        </div>
-                                                    </div>
+                                                    
                                                 </div>
 
 
