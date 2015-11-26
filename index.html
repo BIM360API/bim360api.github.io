@@ -1,535 +1,551 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8">
+    <title>Autodesk BIM 360 API</title>
+    <meta content="chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="bim360api.GitHub.io : The entry point of Autodesk BIM 360 API Pages" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <link href="css/ionicons.css" rel="stylesheet">
+    <link href="css/maria-theme-checkbox.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/maria-base-theme.css" rel="stylesheet">
+    <link href="css/maria-theme.css" rel="stylesheet">
+    <link href="css/open-sans.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+</head>
+<body data-spy="scroll" data-target="#nav-parent">
+    <!-- Header================================================== -->
 
-    <head>
-		<meta charset="utf-8">
-        <title>Autodesk BIM 360 API</title>
-        <meta content="chrome=1" http-equiv="X-UA-Compatible">
-		<meta content="bim360api.GitHub.io : The entry point of Autodesk BIM 360 API Pages" name="description">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <link href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet">
-		<link href="css/ionicons.css" rel="stylesheet">
-		<link href="css/maria-theme-checkbox.css" rel="stylesheet">
-		<link href="css/bootstrap.css" rel="stylesheet">
-		<link href="css/maria-base-theme.css" rel="stylesheet">
-		<link href="css/maria-theme.css" rel="stylesheet">
-		<link href="css/open-sans.css" rel="stylesheet">
-		<link href="css/ek_changes.css" rel="stylesheet">
+    <div class="bs-docs-section clearfix">
+        <div class="row">
+            <div class="col-lg-12">
 
-	<body data-spy="scroll" data-target="#nav-parent">
-		<!-- Header================================================== -->
-		
-		<div class="bs-docs-section clearfix">
-			<div class="row">
-				<div class="col-lg-12">
-									
-				<div class="bs-component">
-					<div class="navbar navbar-default app-navbar">
-						<div class="container app-container">
-							<div class="navbar-header">
-								<a class="navbar-brand" href="https://developer.autodesk.com"><img width="160px;" src="img/Autodesk_logo.png" style="padding: 20px;"></a>
-							</div>
+                <div class="bs-component">
+                    <div class="navbar navbar-default app-navbar">
+                        <div class="container app-container">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="https://developer.autodesk.com"><img width="160px;" src="img/Autodesk_logo.png" style="padding: 20px;"></a>
+                            </div>
                             <ul class="nav navbar-nav navbar-right">
-                            <li><a href="https://github.com/BIM360API">View on GitHub<i
-                                    class="fa fa-github-alt fa-fw"></i></a></li>
-                        </ul>
-						  </div>
-					</div>
-				</div>
-					  
-				</div>
-			</div>				
-		</div>
-		
-		<!-- Banner================================================== -->
-		
-		<div class="clearfix">
-			<div class="row">
-				<div class="col-lg-12">
-				
-					<div class="page-header content-header app-content-header api-detail-header view-and-data-api">
-						<div class="container app-container">
-							<div class="col-xs-12 col-sm-6 col-md-9 col-lg-9 app-title-container">
-								<h1 id="view-and-data-title">Autodesk BIM 360 API</h1>
-							</div>
-							<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 app-button-container">
-								<p class="bs-component">
-									<a href="http://www.autodesk.com/products/bim-360/overview" class="btn app-btn app-btn-lg app-btn-primary create-app-btn pull-right">Learn about BIM 360<span class="bg-icon size-21"><i class="icon ion-chevron-right"></i></span></a>
-								</p>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-		
-		<!-- Content================================================== -->
-		
-		<div class="content-form app-content-form clearfix">
-			<div class="container app-container">
-				<div class="row">
-					<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-						<div id="nav-parent" class="page-header hidden-xs">
-								<div data-spy="affix" data-offset-top="200" class="panel panel-default app-panel-default app-sidenav-panel">
-									<div class="navbar-collapse collapse navbar-responsive-collapse panel-body app-panel-body app-sidenav-body" role="complementary">
-										<div class="col-lg-12">
-											<ul class="nav nav-pills nav-stacked app-sidenav">
-												<li role="presentation" class="active"><a href="#Overview" class="first-child">Overview</a> 
-													
-												</li>
-												<li role="presentation"><a href="#Features" class="first-child">Features</a></li>
-												<li role="presentation"><a href="#BIM360GlueAPI" class="first-child">BIM360 Glue API</a></li>
-												<li role="presentation"><a href="#BIM360FieldAPI" class="first-child">BIM360 Field API</a></li>
-												<li role="presentation"><a href="#Testimonial" class="first-child">Testimonial</a></li>
-												<li role="presentation"><a href="#SampleCode" class="first-child">Sample Code</a></li>
-												<li role="presentation"><a href="http://forums.autodesk.com/t5/bim-360/ct-p/2025" class="first-child">Forum</a></li>
-                                                <li role="presentation"><a href="http://the360view.typepad.com" class="first-child">Blog</a></li>
-                                                <li role="presentation"><a href="http://knowledge.autodesk.com" class="first-child">Documentation</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-						</div>
-						<div id="nav-parent-mobile" class="page-header hidden-sm hidden-md hidden-lg">
-								<div data-spy="affix" data-offset-top="150" class="panel panel-default app-panel-default app-sidenav-panel">
-									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-									<div class="navbar-collapse collapse navbar-responsive-collapse panel-body app-panel-body app-sidenav-body" role="complementary">
-										<div class="col-lg-12">
-											<ul class="nav nav-pills nav-stacked app-sidenav">
-												<li role="presentation" class="active"><a href="#Overview" class="first-child" data-toggle="collapse" data-target=".navbar-responsive-collapse">Overview</a></li>
-												<li role="presentation"><a href="#Features" data-toggle="collapse" data-target=".navbar-responsive-collapse">Features</a></li>
-												<li role="presentation"><a href="#BIM360GlueAPI" data-toggle="collapse" data-target=".navbar-responsive-collapse">BIM360GlueAPI</a>
-												</li>
-												<li role="presentation"><a href="#BIM360FieldAPI" data-toggle="collapse" data-target=".navbar-responsive-collapse">BIM360FieldAPI</a>
-												</li>
-												<li role="presentation"><a href="#Testimonial" data-toggle="collapse" data-target=".navbar-responsive-collapse">Testimonial</a>
-												</li>
-												<li role="presentation"><a href="#SampleCode" data-toggle="collapse" data-target=".navbar-responsive-collapse">Sample Code</a>
-												</li>
-												<li role="presentation"><a href="http://forums.autodesk.com/t5/bim-360/ct-p/2025" data-toggle="collapse" data-target=".navbar-responsive-collapse">Forum</a>
-                                                </li>
-                                                <li role="presentation"><a href="http://the360view.typepad.com" data-toggle="collapse" data-target=".navbar-responsive-collapse">Blog</a>
-                                                </li>
-                                                <li role="presentation"><a href="http://knowledge.autodesk.com" data-toggle="collapse" data-target=".navbar-responsive-collapse">Documentation</a>
-                                                </li>
-											</ul>
-										</div>
-									</div>
-								</div>
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
-						<div class="page-header">
-								<div class="panel panel-default app-panel-default">
-									<div class="panel-body app-panel-body app-api-doc">
-										<div class="col-lg-12">
-											<div class="app-api-section">
-												<div id="Overview" class="app-api-section-heading">
-													<h2 class="app-api-section-title first-child">Overview</h2>
-												</div>
-												<p>Autodesk BIM 360 Services for Construction is among the fastest growing products in Autodesk’s history. BIM 360 APIs and SDK allows developers to extend the capabilities by harnessing the power of web services to transforms the way Construction project data is collected, connected, visualized and managed in the cloud. As a cloud platform, Glue and Field are built for integration with third party systems through our Web Services API. Integration can be as simple as embedding the BIM 360 3D viewer into an application (think of embedding a Youtube video in a web page) or as sophisticated as linking BIM object data to project workflows. Integrations are built on the premise of semantically linking, rather than moving data.</p>										
-                                                <div id="Features" class="app-api-section-heading clearfix">
-													<h2 class="app-api-section-title">Features</h2>
-												</div>
-												<ul>
-													<li>BIM 360 is an open platform with APIs that provides a mechanism for integrating disparate systems in a secure and scalable manner.</li>
-													<li>Connect BIM and critical business workflows with bidirectional integration for Autodesk® and third-party project management and ERP solutions.</li>
-													<li>REST and JavaScript API makes it easier to create applications.</li>
-													<li>Our Viewer Component provides access to model and model components data in your web app - no need for desktop CAD software installations.</li> 
-													<li>2D and 3D models come to life right within your browser &#45; view detailed textures, vivid visualizations, smooth navigation, and in-depth design data.</li> 
-													<li>Browser compatibility with Internet Explorer, and Firefox.</li> 
-													<li>Visualize and interact with more than 60 design file formats in your web app; no plug-ins or downloads required.</li>
-												</ul>
-												<!-- <div id="Files" class="app-api-section-heading">
-													<h3 class="app-api-section-title">Supported File Format</h3>
-												</div>
-												<div class="table-responsive">
-													<table class="table table-hover app-table">
-														<thead>
-															<tr>
-																<th>Autodesk</th>
-																<th>Non Autodesk</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td>AutoCAD&#174; DWG</td>
-																<td>CATIA</td>
-															</tr>
-															<tr>
-																<td>Autodesk&#174; Inventor&#174</td>
-																<td>Siemens Parasolid</td>
-															</tr><tr>
-																<td>Autodesk&#174; Fusion 360</td>
-																<td>Siemens JT Open</td>
-															</tr><tr>
-																<td>Autodesk&#174; Simulation Flex</td>
-																<td>WaveFront Technologies OBJ</td>
-															</tr><tr>
-																<td>Autodesk&#174; Navisworks&#174;</td>
-																<td>Siemens NX</td>
-															</tr><tr>
-																<td>Autodesk&#174; Revit&#174;</td>
-																<td>STEP</td>
-																</tr><tr>
-																<td>Autodesk&#174; 3ds Max&#174;</td>
-																<td>SolidWorks and many more...</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>			 -->
-												<!--  -->
-												<div id="BIM360GlueAPI" class="app-api-section-heading">
-                                                    <h2 class="app-api-section-title first-child">BIM 360 Glue API</h2>
+                                <li>
+                                    <a href="https://github.com/BIM360API">
+                                        View on GitHub<i class="fa fa-github-alt fa-fw"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner================================================== -->
+
+    <div class="clearfix">
+        <div class="row fullscreen-scroller">
+            <div class="col-lg-12  animation-container">
+                <div class="output">
+                    <script src="js/fss.js"></script>
+                    <script src="js/background-animation.js"></script>
+                </div>
+                <div class="page-header content-header app-content-header api-detail-header view-and-data-api">
+                    <div class="container app-container">
+                        <div class="col-xs-12 col-sm-6 col-md-9 col-lg-9 app-title-container">
+                            <h1 id="view-and-data-title">Autodesk BIM 360 API</h1>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 app-button-container">
+                            <p class="bs-component">
+                                <a href="http://www.autodesk.com/products/bim-360/overview" class="btn app-btn app-btn-lg app-btn-primary create-app-btn pull-right">Learn about BIM 360<span class="bg-icon size-21"><i class="icon ion-chevron-right"></i></span></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Content================================================== -->
+
+    <div class="content-form app-content-form clearfix">
+        <div class="container app-container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                    <div id="nav-parent" class="page-header hidden-xs">
+                        <div data-spy="affix" data-offset-top="200" class="panel panel-default app-panel-default app-sidenav-panel">
+                            <div class="navbar-collapse collapse navbar-responsive-collapse panel-body app-panel-body app-sidenav-body" role="complementary">
+                                <div class="col-lg-12">
+                                    <ul class="nav nav-pills nav-stacked app-sidenav">
+                                        <li role="presentation" class="active">
+                                            <a href="#Overview" class="first-child">Overview</a>
+
+                                        </li>
+                                        <li role="presentation"><a href="#Features" class="first-child">Features</a></li>
+                                        <li role="presentation"><a href="#BIM360GlueAPI" class="first-child">BIM360 Glue API</a></li>
+                                        <li role="presentation"><a href="#BIM360FieldAPI" class="first-child">BIM360 Field API</a></li>
+                                        <li role="presentation"><a href="#Testimonial" class="first-child">Testimonial</a></li>
+                                        <li role="presentation"><a href="#SampleCode" class="first-child">Sample Code</a></li>
+                                        <li role="presentation"><a href="http://forums.autodesk.com/t5/bim-360/ct-p/2025" class="first-child">Forum</a></li>
+                                        <li role="presentation"><a href="http://the360view.typepad.com" class="first-child">Blog</a></li>
+                                        <li role="presentation"><a href="http://knowledge.autodesk.com" class="first-child">Documentation</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="nav-parent-mobile" class="page-header hidden-sm hidden-md hidden-lg">
+                        <div data-spy="affix" data-offset-top="150" class="panel panel-default app-panel-default app-sidenav-panel">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="navbar-collapse collapse navbar-responsive-collapse panel-body app-panel-body app-sidenav-body" role="complementary">
+                                <div class="col-lg-12">
+                                    <ul class="nav nav-pills nav-stacked app-sidenav">
+                                        <li role="presentation" class="active"><a href="#Overview" class="first-child" data-toggle="collapse" data-target=".navbar-responsive-collapse">Overview</a></li>
+                                        <li role="presentation"><a href="#Features" data-toggle="collapse" data-target=".navbar-responsive-collapse">Features</a></li>
+                                        <li role="presentation">
+                                            <a href="#BIM360GlueAPI" data-toggle="collapse" data-target=".navbar-responsive-collapse">BIM360GlueAPI</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#BIM360FieldAPI" data-toggle="collapse" data-target=".navbar-responsive-collapse">BIM360FieldAPI</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#Testimonial" data-toggle="collapse" data-target=".navbar-responsive-collapse">Testimonial</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#SampleCode" data-toggle="collapse" data-target=".navbar-responsive-collapse">Sample Code</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="http://forums.autodesk.com/t5/bim-360/ct-p/2025" data-toggle="collapse" data-target=".navbar-responsive-collapse">Forum</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="http://the360view.typepad.com" data-toggle="collapse" data-target=".navbar-responsive-collapse">Blog</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="http://knowledge.autodesk.com" data-toggle="collapse" data-target=".navbar-responsive-collapse">Documentation</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+                    <div class="page-header">
+                        <div class="panel panel-default app-panel-default">
+                            <div class="panel-body app-panel-body app-api-doc">
+                                <div class="col-lg-12">
+                                    <div class="app-api-section">
+                                        <div id="Overview" class="app-api-section-heading">
+                                            <h2 class="app-api-section-title first-child">Overview</h2>
+                                        </div>
+                                        <p>Autodesk BIM 360 Services for Construction is among the fastest growing products in Autodesk’s history. BIM 360 APIs and SDK allows developers to extend the capabilities by harnessing the power of web services to transforms the way Construction project data is collected, connected, visualized and managed in the cloud. As a cloud platform, Glue and Field are built for integration with third party systems through our Web Services API. Integration can be as simple as embedding the BIM 360 3D viewer into an application (think of embedding a Youtube video in a web page) or as sophisticated as linking BIM object data to project workflows. Integrations are built on the premise of semantically linking, rather than moving data.</p>
+                                        <div id="Features" class="app-api-section-heading clearfix">
+                                            <h2 class="app-api-section-title">Features</h2>
+                                        </div>
+                                        <ul>
+                                            <li>BIM 360 is an open platform with APIs that provides a mechanism for integrating disparate systems in a secure and scalable manner.</li>
+                                            <li>Connect BIM and critical business workflows with bidirectional integration for Autodesk® and third-party project management and ERP solutions.</li>
+                                            <li>REST and JavaScript API makes it easier to create applications.</li>
+                                            <li>Our Viewer Component provides access to model and model components data in your web app - no need for desktop CAD software installations.</li>
+                                            <li>2D and 3D models come to life right within your browser &#45; view detailed textures, vivid visualizations, smooth navigation, and in-depth design data.</li>
+                                            <li>Browser compatibility with Internet Explorer, and Firefox.</li>
+                                            <li>Visualize and interact with more than 60 design file formats in your web app; no plug-ins or downloads required.</li>
+                                        </ul>
+                                        <!-- <div id="Files" class="app-api-section-heading">
+                                            <h3 class="app-api-section-title">Supported File Format</h3>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-hover app-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Autodesk</th>
+                                                        <th>Non Autodesk</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>AutoCAD&#174; DWG</td>
+                                                        <td>CATIA</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Autodesk&#174; Inventor&#174</td>
+                                                        <td>Siemens Parasolid</td>
+                                                    </tr><tr>
+                                                        <td>Autodesk&#174; Fusion 360</td>
+                                                        <td>Siemens JT Open</td>
+                                                    </tr><tr>
+                                                        <td>Autodesk&#174; Simulation Flex</td>
+                                                        <td>WaveFront Technologies OBJ</td>
+                                                    </tr><tr>
+                                                        <td>Autodesk&#174; Navisworks&#174;</td>
+                                                        <td>Siemens NX</td>
+                                                    </tr><tr>
+                                                        <td>Autodesk&#174; Revit&#174;</td>
+                                                        <td>STEP</td>
+                                                        </tr><tr>
+                                                        <td>Autodesk&#174; 3ds Max&#174;</td>
+                                                        <td>SolidWorks and many more...</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>			 -->
+                                        <!--  -->
+                                        <div id="BIM360GlueAPI" class="app-api-section-heading">
+                                            <h2 class="app-api-section-title first-child">BIM 360 Glue API</h2>
+                                        </div>
+                                        <p>
+                                            What is the Autodesk® BIM 360™ Glue SDK?
+                                        </p>
+                                        <p>The BIM 360 Glue SDK consists of two distinct components: -</p>
+                                        <ul>
+                                            <li><strong>Web Services API</strong> The Web Services API is a data access API that will allow third party developers to access to the various data objects within the BIM 360 Glue Platform. These data objects would include types such as Users, Projects, Models, etc. With this API, a developer could easily integrate external applications such as project management systems, accounting systems or custom developed solutions.</li>
+                                            <li><strong>Display Component</strong> The Display Component of the BIM 360 Glue SDK is an embeddable viewer and the easiest way for a third party to show 3D models from the BIM 360 Glue Platform within their own custom developed web application.</li>
+                                        </ul>
+                                        <p>With the BIM 360 Glue SDK, you can build applications that take full advantage of the power of the BIM 360 Glue Platform and bring state of the art BIM technology into your products and services.</p>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-6 col-xs-12">
+                                                <div class="">
+                                                    <h4 align="center">
+                                                        Windows Desktop Client (Test Harness)
+                                                    </h4>
+                                                    <p align="center">The Windows Desktop Client (Test Harness) is a Visual Studio 2010 Project written in C#.</p>
                                                 </div>
-                                                <p>
-												What is the Autodesk® BIM 360™ Glue SDK?
-                                                </p>
-                                                <p>The BIM 360 Glue SDK consists of two distinct components: -</p>
-                                                <ul>
-                                                    <li><strong>Web Services API</strong> The Web Services API is a data access API that will allow third party developers to access to the various data objects within the BIM 360 Glue Platform. These data objects would include types such as Users, Projects, Models, etc. With this API, a developer could easily integrate external applications such as project management systems, accounting systems or custom developed solutions.</li>
-                                                    <li><strong>Display Component</strong> The Display Component of the BIM 360 Glue SDK is an embeddable viewer and the easiest way for a third party to show 3D models from the BIM 360 Glue Platform within their own custom developed web application.</li>
-                                                </ul>
-                                                <p>With the BIM 360 Glue SDK, you can build applications that take full advantage of the power of the BIM 360 Glue Platform and bring state of the art BIM technology into your products and services.</p>
-                                                <br>
-                                                <div class="row">
-                                                    <div class="col-md-6 col-xs-12">
-                                                        <div class="">
-                                                            <h4 align="center">
-                                                                Windows Desktop Client (Test Harness)
-                                                            </h4>
-                                                            <p align="center">The Windows Desktop Client (Test Harness) is a Visual Studio 2010 Project written in C#.</p>
-                                                        </div>
-                                                        <div class="">
-                                                            <div class="center">
-                                                                <a href="https://github.com/BIM360API/BIM360GlueSDKTestharness/tree/master/BIM360GlueSDKTestHarness/TestHarness" target="_blank">
-                                                                    <span class="fa-stack fa-5x">
-                                                                        <i class="fa fa-file-o fa-stack-2x"></i>
-                                                                        <i class="fa fa-wrench fa-stack-1x"></i>
-                                                                    </span>
-                                                                </a>
-                                                            </div>
-                                                            <span class="btn-group pull-right">
-                                                                <br>
-                                                               
-                                                                <a class="btn btn-info btn-large" href="https://github.com/BIM360API/BIM360GlueSDKTestharness/tree/master/BIM360GlueSDKTestHarness/TestHarness">Download Sample</a>
+                                                <div class="">
+                                                    <div class="text-center">
+                                                        <a href="https://github.com/BIM360API/BIM360GlueSDKTestharness/tree/master/BIM360GlueSDKTestHarness/TestHarness" target="_blank">
+                                                            <span class="fa-stack fa-5x">
+                                                                <i class="fa fa-file-o fa-stack-2x"></i>
+                                                                <i class="fa fa-wrench fa-stack-1x"></i>
                                                             </span>
-                                                        </div>
+                                                        </a>
                                                     </div>
-                                                    <div class="col-md-6 col-xs-12">
-                                                        <div>
-                                                            <h4 align="center">
-                                                                ASP.NET Web Application
-                                                            </h4>
-                                                            <p align="center">The ASP.NET Web Application is a Visual Studio 2010 Project written in C#.</p>
-                                                        </div>
-                                                        <div class="">
-                                                            <div class="center">
-                                                                <a href="https://github.com/BIM360API/BIM360GlueSDKSampleWebApp/" target="_blank">
-                                                                    <span class="fa-stack fa-5x">
-                                                                        <i class="fa fa-file-o fa-stack-2x"></i>
-                                                                        <i class="fa fa-clock-o fa-stack-1x"></i>
-                                                                    </span>
-                                                                </a>
-                                                            </div>
-                                                            <br>
-                                                            <span class="btn-group pull-right">
-                                                                
-                                                                <a class="btn btn-info btn-large" href="https://github.com/BIM360API/BIM360GlueSDKSampleWebApp">Download Sample</a>
-                                                            </span>
-                                                        </div>
-                                                    </div>
+                                                    <span class="btn-group pull-right">
+                                                        <br>
+
+                                                        <a class="btn btn-info btn-large" href="https://github.com/BIM360API/BIM360GlueSDKTestharness/tree/master/BIM360GlueSDKTestHarness/TestHarness">Download Sample</a>
+                                                    </span>
                                                 </div>
-
-
-													<div id="BIM360FieldAPI" class="app-api-section-heading">
-                                                    <h2 class="app-api-section-title first-child">BIM 360 Field API</h2>
-                                                </div>
-                                                <p>
-                                                    Field API is a REST based web services API that returns results serialized as JSON. All high-level objects support CRUD. 
-                                                </p>
-                                                <p>Two Sets of APIs -</p>
-                                                <ul>
-                                                    <li><strong>/fieldapi/{object}/v{version}</strong> that allows you to work with Field Data</li>
-                                                    <li><strong>api/</strong> Designed for BIM 360 Field Mobile, but is open for customer use.</li>
-                                                </ul>
-                                                <p>Play with the following live application first to understand the Web Services API, and then setup your first integration app leveraging the web services. Make sure you check the source code of these live samples.</p>
-                                                <br>
-                                                <div class="row">
-                                                    <div class="col-md-6 col-xs-12">
-                                                        <div class="">
-                                                            <h4 align="center">
-                                                                Learn the Field Web Services (Test Harness - Beta)
-                                                            </h4>
-                                                            <p align="center">A live quick start guide demonstrating the workflow of using Field Web Services.</p>
-                                                        </div>
-                                                        <div class="">
-                                                            <div class="center">
-                                                                <a href="https://github.com/BIM360API/BIM360FieldSDKTestharness/tree/master/Test%20Harness/BIM360FieldSDK" target="_blank">
-                                                                    <span class="fa-stack fa-5x">
-                                                                        <i class="fa fa-file-o fa-stack-2x"></i>
-                                                                        <i class="fa fa-wrench fa-stack-1x"></i>
-                                                                    </span>
-                                                                </a>
-                                                            </div>
-                                                            <span class="btn-group pull-right">
-                                                                <br>
-                                                            
-                                                                <a class="btn btn-info btn-large" href="https://github.com/BIM360API/BIM360FieldSDKTestharness/tree/master/Test%20Harness/BIM360FieldSDK">Download Sample</a>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>
-											</div>
-
-
-
-<!-- quick starts -->
-                                                <div class="app-api-section">
-                                                    <div id="Testimonial" class="app-api-section-heading">
-													<h2 class="app-api-section-title">User Story</h2>
-												</div>
-												<p class="col-xs-12 col-sm-12 col-md-7 col-lg-7 clearfix"><strong>&#34;Integration of BIM 360 with Dunn Dashboard has helped us redefine project collaboration to extend into precontruction and planning.&#34; </strong><span><strong><br>
-												  </strong><br>
-												  John Jacobs - CIO and Senior VP, JE DUNN Construction</span></p>
-												<div class="row-picture app-row-picture app-api-picture app-api-video col-xs-12 col-sm-12 col-md-5 col-lg-5 clearfix">
-													<a href="https://youtu.be/xmIoCyFNPmU" target="_blank">
-													<img id="" src="http://the360view.typepad.com/jedunn_jacobs.jpg" title="BIM 360 Customer Story">
-													<button class="app-btn-play"><span class="bg-icon size-21"><i class="icon ion-ios7-play"></i></span></button>
-													</a>
-												</div>
-
-												<p class="col-xs-12 col-sm-12 col-md-7 col-lg-7 clearfix"><strong>&#34;Learn how the Autodesk BIM 360™ Platform is helping vertical construction contractors collect, connect, visualize and manage all aspects of the construction process to lower overall risk while reducing costs and increasing profits.&#34; </strong><span><strong><br>
-												  </strong><br>
-												  </span></p>
-												<div class="row-picture app-row-picture app-api-picture app-api-video col-xs-12 col-sm-12 col-md-5 col-lg-5 clearfix">
-													<a href="https://youtu.be/IKLJxw4ZuXA" target="_blank">
-													<img id="" src="http://the360view.typepad.com/bim360_solution_overview.jpg" title="BIM 360 Solution Overview">
-													<button class="app-btn-play"><span class="bg-icon size-21"><i class="icon ion-ios7-play"></i></span></button>
-													</a>
-												</div>
-                                                
-                                                </div>
-												<!-- end quick starts -->
-
-
-
-
-
-
-											<div class="app-api-section">
-												<div id="SampleCode" class="app-api-section-heading">
-                                                <h2 class="app-api-section-title first-child">Sample Code</h2>
                                             </div>
-                                            <p>Additional samples in various languages, demonstrating the workflow of BIM 360 Glue API.</p>
-                                                    <div class="row">
-                                                        <div class="col-md-10 col-md-offset-1">
-                                                            <div class="list-group">
-                                                                <a href="https://github.com/BIM360API/GlueAPIIntroLabs/tree/master/1%20HelloGlueWorld" 
-                                                                    class="list-group-item">
-                                                                <i class="fa fa-book fa-2x pull-left"></i>
-                                                                Glue API Labs - Part 1 Hello World<br>
-                                                                A simple live Glue API Intro Training Lab Sample to help you get started.
-                                                                </a> 
-                                                                <a href="https://github.com/BIM360API/GlueAPIIntroLabs/tree/master/2%20GlueAPIIntro" 
-                                                                    class="list-group-item">
-                                                                <i class="fa fa-book fa-2x pull-left"></i>
-                                                                Glue API Labs - Part 2 API Intro<br>
-                                                                Introduction to Glue API
-                                                                </a>
-                                                                <a href="https://github.com/BIM360API/GlueAPIIntroLabs/tree/master/3%20GlueAPIWebIntro"
-                                                                    class="list-group-item">
-                                                                <i class="fa fa-book fa-2x pull-left"></i>
-                                                                Glue API Labs - Part 3 Web Intro<br>
-                                                                Introduction to Glue Display Component.
-                                                                </a>
-                                                                <a href="https://github.com/BIM360API/GlueAPIIntroLabs/tree/master/4%20GlueAPIWebIntroJS" 
-                                                                    class="list-group-item">
-                                                                <i class="fa fa-book fa-2x pull-left"></i>
-                                                                Glue API Labs - Part 4 Web and JS<br>
-                                                                Display Component with Javascript Introduction.
-                                                                </a>
-                                                                <a href="https://github.com/BIM360API/GlueSDKSampleWebApp" 
-                                                                    class="list-group-item">
-                                                                <i class="fa fa-book fa-2x pull-left"></i>
-                                                                Glue Web App<br>An advanced live sample demonstrating embedding a 3D model into a web page and interactions using Javascript.
-                                                                </a>
-                                                                <a href="https://github.com/BIM360API/GlueAPIIntro_MergeTest" 
-                                                                    class="list-group-item">
-                                                                <i class="fa fa-book fa-2x pull-left"></i>
-                                                                API Model Merge Test<br>
-                                                                A sample application illustrating model aggregation through API.
-                                                                </a>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                            <p>Some other samples, demonstrating the BIM 360 Field API Workflows</p>
-                                                    <div class="row">
-                                                        <div class="col-md-10 col-md-offset-1">
-                                                            <div class="list-group">
-                                                                <a href="https://github.com/BIM360API/FieldAPI_IntroLabs/tree/master/1%20HelloFieldWorld"
-                                                                    class="list-group-item">
-                                                                <i class="fa fa-book fa-2x pull-left"></i>
-                                                                Field API Labs - Part 1 Hello World<br>
-                                                                A very simple getting started app for Field API.
-                                                                </a>
-                                                                <!-- <p><a class="btn btn-xs btn-default" href="#" target="_blank">Video</a>  
-                                                                    <a class="btn btn-xs btn-default" href="http://viewer.autodesk.io/bingmapintegration" target="_blank">Demo</a> 
-                                                                    </p>
-                                                                    -->
-                                                                <a href="https://github.com/BIM360API/FieldAPI_IntroLabs/tree/master/2%20FieldAPIIntro" 
-                                                                   class="list-group-item">
-                                                                    <i class="fa fa-book fa-2x pull-left"></i>
-                                                                    Field API Labs - Part 2 API Intro<br>
-                                                                    Field API Introduction through a .Net Sample.
-                                                                </a>
-                                                                <a href="https://github.com/BIM360API/FieldAPI_IntroLabs/tree/master/3%20FieldAPIWebIntro"
-                                                                    class="list-group-item">
-                                                                <i class="fa fa-book fa-2x pull-left"></i>
-                                                                Field API Labs - Part 3 Web Intro<br>
-                                                                Simple Web App illustrating the Field API Web services.
-                                                                </a>
-                                                                <!-- <p><a class="btn btn-xs btn-default" href="#" target="_blank">Video</a>  
-                                                                    <a class="btn btn-xs btn-default" href="#" target="_blank">Demo</a> 
-                                                                    </p> -->
-                                                                    <a href="https://github.com/BIM360API/FieldAPI_IntroLabs/tree/master/4%20FieldAPIWebIntroEx"
-                                                                    class="list-group-item">
-                                                                <i class="fa fa-book fa-2x pull-left"></i>
-                                                                Field API Labs - Part 4 Web Sample<br>
-                                                                Web app extending the Field API methods.
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                            <p>Samples demonstrating the possible usage of Autodesk view and data API:</p>
-                                                <div class="row">
-                                                    <div class="col-md-10 col-md-offset-1">
-                                                        <div class="list-group">
-                                                            <a href="https://github.com/BIM360API/view-data-api-intro-labs" 
-                                                                class="list-group-item">
-                                                            <i class="fa fa-book fa-2x pull-left"></i>
-                                                            View and Data API Intro Labs<br>
-                                                            Getting started samples for Autodesk View and Data API.
-                                                            </a>
-                                                            <!-- <p><a class="btn btn-xs btn-default" href="#" target="_blank">Video</a>  
-                                                                <a class="btn btn-xs btn-default" href="http://viewer.autodesk.io/timeliner" target="_blank">Demo</a> 
-                                                                </p> -->
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-6 col-xs-12">
+                                                <div>
+                                                    <h4 align="center">
+                                                        ASP.NET Web Application
+                                                    </h4>
+                                                    <p align="center">The ASP.NET Web Application is a Visual Studio 2010 Project written in C#.</p>
                                                 </div>
-									</div>
+                                                <div class="">
+                                                    <div class="text-center">
+                                                        <a href="https://github.com/BIM360API/BIM360GlueSDKSampleWebApp/" target="_blank">
+                                                            <span class="fa-stack fa-5x">
+                                                                <i class="fa fa-file-o fa-stack-2x"></i>
+                                                                <i class="fa fa-clock-o fa-stack-1x"></i>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <br>
+                                                    <span class="btn-group pull-right">
 
-<!-- support -->
-                                        <div class="app-api-section">
-                                            <div id="support" class="app-api-section-heading">
-                                                <h2 class="app-api-section-title first-child">Support</h2>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-4" align="center">
-                                                    <a href="http://knowledge.autodesk.com">
-                                                    <i class="fa fa-file-text-o fa-5x"></i>
-                                                    <br>Documentation
-                                                    </a>
-                                                    <p class="text-left">The documentation is always the first place you should go when you have problems.</p>
-                                                </div>
-                                                <div class="col-md-4" align="center">
-                                                    <a href="http://forums.autodesk.com/t5/bim-360/ct-p/2025">
-                                                    <i class="fa fa-users fa-5x"></i>
-                                                    <br>BIM 360 API Forum</a>
-                                                    <p class="text-left">Need help? Search on forums for similar questions and solutions, or ask your question in a new thread.</p>
-                                                </div>
-                                                <div class="col-md-4" align="center">
-                                                    <a href="http://the360view.typepad.com">
-                                                    <i class="fa fa-rss fa-5x"></i>
-                                                    <br>BIM360 API Blog</a>
-                                                    <p class="text-left">We share our solutions, tips and our learning experiences on the "The 360 View" Blog. Be sure to check it out.</p>
+                                                        <a class="btn btn-info btn-large" href="https://github.com/BIM360API/BIM360GlueSDKSampleWebApp">Download Sample</a>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
-                                                <!-- end support -->
 
-									<!-- Bottom Back to top Mobile================================================== -->
-									<div class="bs-docs-section clearfix">
-										<div class="row">
-											<div class="col-xs-12">
-												<div class="col-xs-6 col-sm-6 app-button-container mob-app-button-container back-to-top-container">
-													<p class="bs-component">
-														<a href="#view-and-data-title" class="btn app-btn app-btn-lg app-btn-default back-to-top-btn">Back to top</a>
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>	
-			
-			<!-- Bottom Button Mobile================================================== -->
-		
-						<div class="bs-docs-section clearfix">
-							<div class="row">
-								<div class="col-lg-12">
-										<div class="container app-container">
-											<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 app-button-container mob-app-button-container">
-												<p class="bs-component">
-													<a href="ADSK_PaaS_Create_New_App.html" class="btn app-btn app-btn-lg app-btn-primary create-app-btn pull-right">Create an App<span class="bg-icon size-21"><i class="icon ion-chevron-right"></i></span></a>
-												</p>
-											</div>
-										</div>
-								</div>
-							</div>
-						</div>
-		</div>
+                                        <div id="BIM360FieldAPI" class="app-api-section-heading">
+                                            <h2 class="app-api-section-title first-child">BIM 360 Field API</h2>
+                                        </div>
+                                        <p>
+                                            Field API is a REST based web services API that returns results serialized as JSON. All high-level objects support CRUD.
+                                        </p>
+                                        <p>Two Sets of APIs -</p>
+                                        <ul>
+                                            <li><strong>/fieldapi/{object}/v{version}</strong> that allows you to work with Field Data</li>
+                                            <li><strong>api/</strong> Designed for BIM 360 Field Mobile, but is open for customer use.</li>
+                                        </ul>
+                                        <p>Play with the following live application first to understand the Web Services API, and then setup your first integration app leveraging the web services. Make sure you check the source code of these live samples.</p>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-12 col-xs-12">
+                                                <div class="">
+                                                    <h4 align="center">
+                                                        Learn the Field Web Services (Test Harness - Beta)
+                                                    </h4>
+                                                    <p align="text-center">A live quick start guide demonstrating the workflow of using Field Web Services.</p>
+                                                </div>
+                                                <div class="">
+                                                    <div class="text-center">
+                                                        <a href="https://github.com/BIM360API/BIM360FieldSDKTestharness/tree/master/Test%20Harness/BIM360FieldSDK" target="_blank">
+                                                            <span class="fa-stack fa-5x">
+                                                                <i class="fa fa-file-o fa-stack-2x"></i>
+                                                                <i class="fa fa-wrench fa-stack-1x"></i>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <span class="btn-group pull-right">
+                                                        <br>
 
-		<!-- Footer================================================== -->
-		
-		<div class="clearfix">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="page-footer">
-						<div class="container app-container">
-							<p><a href="http://www.autodesk.com/company/legal-notices-trademarks/privacy-statement">Privacy</a>  |  <a href="http://www.autodesk.com/company/legal-notices-trademarks">Legal Notices & Trademarks</a>  |  <a href="http://www.autodesk.com/company/license-compliance/report-noncompliance">Report Noncompliance</a>
-							<br>&#169; Copyright 2014 Autodesk. All rights reserved. </p>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-        <!-- Your site ends -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script>
-		jQuery(document).ready(function() {
-			var offset = 200;
-			var duration = 500;
-			jQuery(window).scroll(function() {
-				if (jQuery(this).scrollTop() > offset) {
-					jQuery('.back-to-top-btn').fadeIn(duration);
-				} else {
-					jQuery('.back-to-top-btn').fadeOut(duration);
-				}
-			});
-			
-			jQuery('.back-to-top-btn').click(function(event) {
-				event.preventDefault();
-				jQuery('html, body').animate({scrollTop: 0}, duration);
-				return false;
-			})
-		});
-		</script>
-		});
-    </body>
+                                                        <a class="btn btn-info btn-large" href="https://github.com/BIM360API/BIM360FieldSDKTestharness/tree/master/Test%20Harness/BIM360FieldSDK">Download Sample</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- quick starts -->
+                                <div class="app-api-section">
+                                    <div id="Testimonial" class="app-api-section-heading">
+                                        <h2 class="app-api-section-title">User Story</h2>
+                                    </div>
+                                    <p class="col-xs-12 col-sm-12 col-md-7 col-lg-7 clearfix">
+                                        <strong>&#34;Integration of BIM 360 with Dunn Dashboard has helped us redefine project collaboration to extend into precontruction and planning.&#34; </strong><span>
+                                            <strong>
+                                                <br>
+                                            </strong><br>
+                                            John Jacobs - CIO and Senior VP, JE DUNN Construction
+                                        </span>
+                                    </p>
+                                    <div class="row-picture app-row-picture app-api-picture app-api-video col-xs-12 col-sm-12 col-md-5 col-lg-5 clearfix">
+                                        <a href="https://youtu.be/xmIoCyFNPmU" target="_blank">
+                                            <img id="" src="http://the360view.typepad.com/jedunn_jacobs.jpg" title="BIM 360 Customer Story">
+                                            <button class="app-btn-play"><span class="bg-icon size-21"><i class="icon ion-ios7-play"></i></span></button>
+                                        </a>
+                                    </div>
+                                    <p class="col-xs-12 col-sm-12 col-md-7 col-lg-7 clearfix">
+                                        <strong>&#34;Learn how the Autodesk BIM 360™ Platform is helping vertical construction contractors collect, connect, visualize and manage all aspects of the construction process to lower overall risk while reducing costs and increasing profits.&#34; </strong><span>
+                                            <strong>
+                                                <br>
+                                            </strong><br>
+                                        </span>
+                                    </p>
+                                    <div class="row-picture app-row-picture app-api-picture app-api-video col-xs-12 col-sm-12 col-md-5 col-lg-5 clearfix">
+                                        <a href="https://youtu.be/IKLJxw4ZuXA" target="_blank">
+                                            <img id="" src="http://the360view.typepad.com/bim360_solution_overview.jpg" title="BIM 360 Solution Overview">
+                                            <button class="app-btn-play"><span class="bg-icon size-21"><i class="icon ion-ios7-play"></i></span></button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <!-- end quick starts -->
+
+
+
+                                <div class="app-api-section">
+                                    <div id="SampleCode" class="app-api-section-heading">
+                                        <h2 class="app-api-section-title first-child">Sample Code</h2>
+                                    </div>
+                                    <p>Additional samples in various languages, demonstrating the workflow of BIM 360 Glue API.</p>
+                                    <div class="row">
+                                        <div class="col-md-10 col-md-offset-1">
+                                            <div class="list-group">
+                                                <a href="https://github.com/BIM360API/GlueAPIIntroLabs/tree/master/1%20HelloGlueWorld"
+                                                   class="list-group-item">
+                                                    <i class="fa fa-book fa-2x pull-left"></i>
+                                                    Glue API Labs - Part 1 Hello World<br>
+                                                    A simple live Glue API Intro Training Lab Sample to help you get started.
+                                                </a>
+                                                <a href="https://github.com/BIM360API/GlueAPIIntroLabs/tree/master/2%20GlueAPIIntro"
+                                                   class="list-group-item">
+                                                    <i class="fa fa-book fa-2x pull-left"></i>
+                                                    Glue API Labs - Part 2 API Intro<br>
+                                                    Introduction to Glue API
+                                                </a>
+                                                <a href="https://github.com/BIM360API/GlueAPIIntroLabs/tree/master/3%20GlueAPIWebIntro"
+                                                   class="list-group-item">
+                                                    <i class="fa fa-book fa-2x pull-left"></i>
+                                                    Glue API Labs - Part 3 Web Intro<br>
+                                                    Introduction to Glue Display Component.
+                                                </a>
+                                                <a href="https://github.com/BIM360API/GlueAPIIntroLabs/tree/master/4%20GlueAPIWebIntroJS"
+                                                   class="list-group-item">
+                                                    <i class="fa fa-book fa-2x pull-left"></i>
+                                                    Glue API Labs - Part 4 Web and JS<br>
+                                                    Display Component with Javascript Introduction.
+                                                </a>
+                                                <a href="https://github.com/BIM360API/GlueSDKSampleWebApp"
+                                                   class="list-group-item">
+                                                    <i class="fa fa-book fa-2x pull-left"></i>
+                                                    Glue Web App<br>An advanced live sample demonstrating embedding a 3D model into a web page and interactions using Javascript.
+                                                </a>
+                                                <a href="https://github.com/BIM360API/GlueAPIIntro_MergeTest"
+                                                   class="list-group-item">
+                                                    <i class="fa fa-book fa-2x pull-left"></i>
+                                                    API Model Merge Test<br>
+                                                    A sample application illustrating model aggregation through API.
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Some other samples, demonstrating the BIM 360 Field API Workflows</p>
+                                    <div class="row">
+                                        <div class="col-md-10 col-md-offset-1">
+                                            <div class="list-group">
+                                                <a href="https://github.com/BIM360API/FieldAPI_IntroLabs/tree/master/1%20HelloFieldWorld"
+                                                   class="list-group-item">
+                                                    <i class="fa fa-book fa-2x pull-left"></i>
+                                                    Field API Labs - Part 1 Hello World<br>
+                                                    A very simple getting started app for Field API.
+                                                </a>
+                                                <!-- <p><a class="btn btn-xs btn-default" href="#" target="_blank">Video</a>
+                                                    <a class="btn btn-xs btn-default" href="http://viewer.autodesk.io/bingmapintegration" target="_blank">Demo</a>
+                                                    </p>
+                                                    -->
+                                                <a href="https://github.com/BIM360API/FieldAPI_IntroLabs/tree/master/2%20FieldAPIIntro"
+                                                   class="list-group-item">
+                                                    <i class="fa fa-book fa-2x pull-left"></i>
+                                                    Field API Labs - Part 2 API Intro<br>
+                                                    Field API Introduction through a .Net Sample.
+                                                </a>
+                                                <a href="https://github.com/BIM360API/FieldAPI_IntroLabs/tree/master/3%20FieldAPIWebIntro"
+                                                   class="list-group-item">
+                                                    <i class="fa fa-book fa-2x pull-left"></i>
+                                                    Field API Labs - Part 3 Web Intro<br>
+                                                    Simple Web App illustrating the Field API Web services.
+                                                </a>
+                                                <!-- <p><a class="btn btn-xs btn-default" href="#" target="_blank">Video</a>
+                                                    <a class="btn btn-xs btn-default" href="#" target="_blank">Demo</a>
+                                                    </p> -->
+                                                <a href="https://github.com/BIM360API/FieldAPI_IntroLabs/tree/master/4%20FieldAPIWebIntroEx"
+                                                   class="list-group-item">
+                                                    <i class="fa fa-book fa-2x pull-left"></i>
+                                                    Field API Labs - Part 4 Web Sample<br>
+                                                    Web app extending the Field API methods.
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Samples demonstrating the possible usage of Autodesk view and data API:</p>
+                                    <div class="row">
+                                        <div class="col-md-10 col-md-offset-1">
+                                            <div class="list-group">
+                                                <a href="https://github.com/BIM360API/view-data-api-intro-labs"
+                                                   class="list-group-item">
+                                                    <i class="fa fa-book fa-2x pull-left"></i>
+                                                    View and Data API Intro Labs<br>
+                                                    Getting started samples for Autodesk View and Data API.
+                                                </a>
+                                                <!-- <p><a class="btn btn-xs btn-default" href="#" target="_blank">Video</a>
+                                                    <a class="btn btn-xs btn-default" href="http://viewer.autodesk.io/timeliner" target="_blank">Demo</a>
+                                                    </p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- support -->
+                                <div class="app-api-section">
+                                    <div id="support" class="app-api-section-heading">
+                                        <h2 class="app-api-section-title first-child">Support</h2>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4" align="center">
+                                            <a href="http://knowledge.autodesk.com">
+                                                <i class="fa fa-file-text-o fa-5x"></i>
+                                                <br>Documentation
+                                            </a>
+                                            <p class="text-left">The documentation is always the first place you should go when you have problems.</p>
+                                        </div>
+                                        <div class="col-md-4" align="center">
+                                            <a href="http://forums.autodesk.com/t5/bim-360/ct-p/2025">
+                                                <i class="fa fa-users fa-5x"></i>
+                                                <br>BIM 360 API Forum
+                                            </a>
+                                            <p class="text-left">Need help? Search on forums for similar questions and solutions, or ask your question in a new thread.</p>
+                                        </div>
+                                        <div class="col-md-4" align="center">
+                                            <a href="http://the360view.typepad.com">
+                                                <i class="fa fa-rss fa-5x"></i>
+                                                <br>BIM360 API Blog
+                                            </a>
+                                            <p class="text-left">We share our solutions, tips and our learning experiences on the "The 360 View" Blog. Be sure to check it out.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end support -->
+                                <!-- Bottom Back to top Mobile================================================== -->
+                                <div class="bs-docs-section clearfix">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="col-xs-6 col-sm-6 app-button-container mob-app-button-container back-to-top-container">
+                                                <p class="bs-component">
+                                                    <a href="#view-and-data-title" class="btn app-btn app-btn-lg app-btn-default back-to-top-btn">Back to top</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Button Mobile================================================== -->
+
+        <div class="bs-docs-section clearfix">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="container app-container">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 app-button-container mob-app-button-container">
+                            <p class="bs-component">
+                                <a href="ADSK_PaaS_Create_New_App.html" class="btn app-btn app-btn-lg app-btn-primary create-app-btn pull-right">Create an App<span class="bg-icon size-21"><i class="icon ion-chevron-right"></i></span></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer================================================== -->
+
+    <div class="clearfix">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-footer">
+                    <div class="container app-container">
+                        <p>
+                            <a href="http://www.autodesk.com/company/legal-notices-trademarks/privacy-statement">Privacy</a>  |  <a href="http://www.autodesk.com/company/legal-notices-trademarks">Legal Notices & Trademarks</a>  |  <a href="http://www.autodesk.com/company/license-compliance/report-noncompliance">Report Noncompliance</a>
+                            <br>&#169; Copyright 2014 Autodesk. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Your site ends -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            var offset = 200;
+            var duration = 500;
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > offset) {
+                    jQuery('.back-to-top-btn').fadeIn(duration);
+                } else {
+                    jQuery('.back-to-top-btn').fadeOut(duration);
+                }
+            });
+
+            jQuery('.back-to-top-btn').click(function (event) {
+                event.preventDefault();
+                jQuery('html, body').animate({ scrollTop: 0 }, duration);
+                return false;
+            })
+        });
+    </script>
+    });
+</body>
 </html>
